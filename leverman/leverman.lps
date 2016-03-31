@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="4">
+      <Unit0>
+        <Filename Value="leverman.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="4"/>
+        <CursorPos X="24" Y="5"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\inc\resh.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="9"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\inc\systemh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="92"/>
+        <CursorPos X="22" Y="109"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\objpas\objpas.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="8" Y="35"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+    </Units>
+    <JumpHistory Count="8" HistoryIndex="7">
+      <Position1>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="5" Column="42"/>
+      </Position1>
+      <Position2>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="7" Column="22"/>
+      </Position2>
+      <Position3>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="5" Column="62"/>
+      </Position3>
+      <Position4>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="12" Column="15"/>
+      </Position4>
+      <Position5>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="14" Column="6"/>
+      </Position5>
+      <Position6>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="12" Column="16"/>
+      </Position6>
+      <Position7>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="19" Column="17" TopLine="10"/>
+      </Position7>
+      <Position8>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="23" Column="24" TopLine="15"/>
+      </Position8>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
