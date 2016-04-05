@@ -1,5 +1,5 @@
 leverman.exe
 lib
-.bak
-.ppu
-.o
+*.bak
+*.ppu
+*.o
