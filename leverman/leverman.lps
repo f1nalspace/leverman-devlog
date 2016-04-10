@@ -4,12 +4,12 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="leverman.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="20" Y="18"/>
+        <TopLine Value="30"/>
+        <CursorPos X="9" Y="62"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -27,8 +27,19 @@
         <CursorPos X="10" Y="109"/>
         <UsageCount Value="10"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="win32_leverman.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="6"/>
+        <CursorPos X="7" Y="23"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
     </Units>
-    <JumpHistory Count="6" HistoryIndex="5">
+    <JumpHistory Count="20" HistoryIndex="19">
       <Position1>
         <Filename Value="leverman.lpr"/>
         <Caret Line="5" Column="42"/>
@@ -53,6 +64,62 @@
         <Filename Value="leverman.lpr"/>
         <Caret Line="8" Column="15"/>
       </Position6>
+      <Position7>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="18" Column="20"/>
+      </Position7>
+      <Position8>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="22" Column="66"/>
+      </Position8>
+      <Position9>
+        <Filename Value="win32_leverman.pas"/>
+        <Caret Column="21"/>
+      </Position9>
+      <Position10>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="35" Column="25" TopLine="3"/>
+      </Position10>
+      <Position11>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="5" Column="3"/>
+      </Position11>
+      <Position12>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="30" Column="48" TopLine="6"/>
+      </Position12>
+      <Position13>
+        <Filename Value="win32_leverman.pas"/>
+        <Caret Line="18"/>
+      </Position13>
+      <Position14>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="33" Column="50" TopLine="6"/>
+      </Position14>
+      <Position15>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="38" Column="38" TopLine="7"/>
+      </Position15>
+      <Position16>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="35" Column="39" TopLine="7"/>
+      </Position16>
+      <Position17>
+        <Filename Value="win32_leverman.pas"/>
+        <Caret Line="25" Column="4"/>
+      </Position17>
+      <Position18>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="31" Column="15" TopLine="7"/>
+      </Position18>
+      <Position19>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="34" Column="71" TopLine="14"/>
+      </Position19>
+      <Position20>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="50" Column="14" TopLine="18"/>
+      </Position20>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
