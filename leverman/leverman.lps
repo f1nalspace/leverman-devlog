@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="leverman.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="20" Y="18"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\win\sysutils.pp"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="73" Y="16"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\objpas\sysutils\sysstrh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="92"/>
+        <CursorPos X="10" Y="109"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="6" HistoryIndex="5">
+      <Position1>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="5" Column="42"/>
+      </Position1>
+      <Position2>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="8" Column="12"/>
+      </Position2>
+      <Position3>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="6" Column="3"/>
+      </Position3>
+      <Position4>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="3" Column="14"/>
+      </Position4>
+      <Position5>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="6" Column="18"/>
+      </Position5>
+      <Position6>
+        <Filename Value="leverman.lpr"/>
+        <Caret Line="8" Column="15"/>
+      </Position6>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
