@@ -21,14 +21,87 @@ var
   D: integer;
   D42: integer = 42;
 
+// Typ definitionen
+type
+  TU32 = LongWord; // Das ist weiterhin ein LongWord - TU32 ist somit nur nen Alias
+  TU32Own = type LongWord; // Eigener 32-bit ganzzahl typ - nicht mehr direkt ein LongWord
+
+  // struct / mehrere variablen in einem block
+  // Hier benötigen wir einfach ne deklarierte variable
+  // Gruppierung von Variablen
+  // Speicherbereich ist abhängig vom Inhalt
+  // Alles ist public!
+  TMeinVector4f = record
+    X, Y, Z : Single;
+    W : Single;
+  end;
+
+  // Dieser record ist auf jedenfall immer 128bit groß = 32 byte
+  TMein128BitTyp = record
+    X, Y, Z, W : Single; // 32bit * 4
+  end;
+
+  // Wenn wir 64-bit kompilieren, dann wird delphi automatisch records auf 64 bit vergrößern wenn nötig
+  TMein32BitTyp = record
+    X : Single; // 32bit
+  end;
+  // Record wird aufgefüllt damit 64bit Padding erreichtbar - ihr müsst nicht wissen was das genau bedeutet
+  TMein32BitTypMitPadding = record
+    X : Single; // 32bit
+    Padding : Single; // 32bit
+  end;
+  // Ich will kein padding - kann ich haben
+  TMein32BitTypOhneAutomatischesPadding = packed record
+    X : Single; // 32bit
+  end;
+
+  // Alles ist public!
+  TMeinObjektTyp = object
+    X, Y, Z : Single;
+    W : Single;
+  end;
+
+  // Typisch für ne Klasse - wir benötigen eine Instanz!
+  // Es gibt klassen - aber wir benötigen diese nicht unbedingt.
+  // Klassen sind restmal nicht wichtig.
+  // In Klassen gibt es alles - private, public, protected, published
+  // Kommt später
+  TMeineKlasse = class
+    X, Y, Z : Single;
+    W : Single;
+  end;
+
 implementation
 
 var
   X: string = 'Mein text';
   Y, Z: integer; // Mehrere Zuweisungen für gleichen Typ ohne direkte initialiserung
+  Mein32BitGanzZahl : TU32 = 100; // Compiler macht daraus automatisch ein LongWord
+  MeineAndere32BitGanzzahl : TU32Own = 100;
+  Speicher : TMeinVector4f;
 
 procedure HalloWelt3(); forward;
 procedure VariablenTypen(); forward;
+
+procedure ZugriffaufMeinSPeicher;
+begin
+  Speicher.X := 5;
+end;
+
+procedure NeueWasAuchImmer;
+var
+  U64 : QWord;
+  C : Cardinal;
+begin
+  U64 := High(QWord);
+  Mein32BitGanzZahl := U64;
+  // Warum geht das???
+  MeineAndere32BitGanzzahl := U64;
+
+  // Boolean nicht kompatibel mit Ganzzahl
+  //Mein32BitGanzZahl := true;
+  //MeineAndere32BitGanzzahl := true;
+end;
 
 procedure WillHalloWeltAufrufenObwohlDarunter();
 begin
@@ -195,6 +268,11 @@ begin
   repeat
     Inc(i);
   until i > 10;
+end;
+
+procedure TypDefinitionen;
+begin
+
 end;
 
 // Optionalen Initialisierung und Finalisierung block (Ähnlich wie Static Initialize)
