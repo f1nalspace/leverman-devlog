@@ -80,8 +80,121 @@ begin
   writeln(low(s32));
   writeln(low(u64));
   writeln(low(s64));
-  F32 := 5.0;
+  F32 := 5.0 + 3.5;
   F64 := 5000.3123;
+end;
+
+// By Value (Kopie wird gemacht)
+function UnsereInc(Value : Integer) : Integer;
+begin
+  Value := 4; // Value kann  überschrieben werden
+  Result := Value + 1;
+end;
+
+// Constant (Kopie ?)
+function UnsereInc2(const Value : Integer) : Integer;
+begin
+  //Value := 4; // Value kann nicht überschrieben werden
+  Result := Value + 1;
+end;
+
+// By Referenz (Keine Kopie)
+// Argumente können auch direkt initialisiert werden und sind damit optional!
+function UnsereInc3(var Value : Integer; By : Integer = 1) : Integer;
+begin
+  Value := Value + By; // Value kann direkt verändert werden, weil referenz auf Variable
+  Result := Value;
+end;
+
+procedure Bedingungen();
+var
+  R : Boolean;
+  X : Integer;
+begin
+  // Größer und Nicht Gleich
+  R := (1 > 10) and (2 <> 10);
+
+  // == gibt es nicht, da := gleich Zuweisung
+  //if (R == true) then
+  if R = true then
+  begin
+
+  end;
+
+  if (R = true) or (4 < 10) then
+    WriteLn('Bar')
+  else
+    Writeln('Foo');
+
+  // Vor einem Else kein Strichpunkt
+  if false then
+  begin
+    writeln('xxx');
+    writeln('lol');
+  end
+  else
+  begin
+    R := false;
+  end;
+
+  // Geth nciht in Delphi
+  //if (10) begin
+  //
+  //end;
+
+  X := 42;
+
+  // Inkrementierung von 1 auf Variablen (Ändert variable direkt)
+  Inc(X);
+
+  // Dekrementierung von 1 auf Variablen (Ändert variable direkt)
+  Dec(X);
+
+  // Freepascal unterstützt += Operatoren sofern eingegestellt in Konfiguration += (Delphi nicht!)
+  X += 5;
+
+  // Bitoperatoren
+  // Rechts Verschiebung = nicht >> sondern shr
+  // Links Verschiebung = nicht << sondern shl
+  // And operator = nicht & sondern and
+  // Or operator = nicht | sondern or
+end;
+
+procedure Schleifen();
+var
+  I : Integer;
+begin
+
+  // Hochzählen von 0 bis 9 exakt
+  // For hat kein Step - sofern ich weiß oder doch???
+  // for (i = 0; i < 10; ++i) <- Das selbe wie
+  for I := 0 to 9 do
+  begin
+
+  end;
+
+  // Runterzählen von 10 bis 1
+  // For hat kein Step - sofern ich weiß oder doch???
+  for I := 10 downto 1 do
+  begin
+
+  end;
+
+  // while schleife
+  I := 0;
+  while i < 10 do
+  begin
+    // i++ geht nicht
+    //I++;
+    i += 1;
+    //Inc(I);
+  end;
+
+  // do while schleife
+  i := 1;
+  repeat
+    Inc(i);
+  until i > 10;
 end;
 
 // Optionalen Initialisierung und Finalisierung block (Ähnlich wie Static Initialize)
