@@ -2,7 +2,7 @@ program leverman;
 
 uses
   SysUtils,
-  win32_leverman; // Include/Imports
+  win32_leverman, speichermanagement; // Include/Imports
 
 // Einzelzeilen-Kommentar
 
@@ -59,5 +59,6 @@ begin
   win32_leverman.HalloWelt2();
   writeln(D42);
   //writeln(X); // Geht nicht, da in win32_leverman und nicht global
+  WirLernenPointer;
   readln();
 end.
