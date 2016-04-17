@@ -145,9 +145,17 @@ var
   AStr  : AnsiString; // Array of chars - geht bis max U32 (Max signiert oder unsigniert??)
   WC  : WideChar; // 2^16 (0 - 65535)
   WStr : WideString; // Array of widechars - geht bis max U32 (Max signiert oder unsigniert??), aber nur halb so lang wie AnsiString (UNICODE 16bit)
-  S : String; // Entweder Ansi oder WideString - abhängig von der Projekteinstellung
+  S : String; // Entweder Ansi oder WideString - abhängig von der PLatformer bzw. einer Compiler direktive
   B : Boolean; // 2^8 (False, True - kann nicht null werden!)
   D : TDateTime; // Datumstyp (2^64 - muss man hier erstmal kennen)
+var
+  RIchtigerU64 : UInt64; // Immer UInt für unsigned benutzen - wichtig, das kann in anderen Delphi Versionen anderst sein
+  I : Int32;
+var
+  // Bool-Typen - Für alignment/padding gut
+  BB : ByteBool; // 8-bit Bool
+  WB : WordBool; // 16-bit Bool
+  LB : LongBool; // 32-bit Bool
 begin
   writeln(low(u32));
   writeln(low(s32));
@@ -155,6 +163,15 @@ begin
   writeln(low(s64));
   F32 := 5.0 + 3.5;
   F64 := 5000.3123;
+
+
+
+  BB := true;
+  BB := ByteBool(1);
+
+  WB := True;
+
+  LB := false;
 end;
 
 // By Value (Kopie wird gemacht)
