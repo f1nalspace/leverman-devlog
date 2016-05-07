@@ -2,7 +2,8 @@ program leverman;
 
 uses
   SysUtils,
-  win32_leverman; // Include/Imports
+  win32_leverman,
+  arrays; // Include/Imports
 
 // Einzelzeilen-Kommentar
 
@@ -45,6 +46,7 @@ var
   C42: integer = 42; // Direkte zuweisung nach deklaration geht hier!
 
 begin
+  {
   // Zuweisung immer mit :=
   C := 42;
   // C : inTegeR; (Nicht zulässig!)
@@ -59,5 +61,10 @@ begin
   win32_leverman.HalloWelt2();
   writeln(D42);
   //writeln(X); // Geht nicht, da in win32_leverman und nicht global
+  }
+
+  StatischeArrays();
+  DynamischeArrays();
+
   readln();
 end.
