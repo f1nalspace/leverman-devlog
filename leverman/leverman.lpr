@@ -3,7 +3,8 @@ program leverman;
 uses
   SysUtils,
   win32_leverman,
-  arrays; // Include/Imports
+  arrays,
+  speicher; // Include/Imports
 
 // Einzelzeilen-Kommentar
 
@@ -63,8 +64,14 @@ begin
   //writeln(X); // Geht nicht, da in win32_leverman und nicht global
   }
 
+  {
   StatischeArrays();
   DynamischeArrays();
+  }
+
+  GlobaleVariable := 42;
+
+  meinSpeicher();
 
   readln();
 end.
