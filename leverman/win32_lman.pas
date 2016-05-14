@@ -12,9 +12,22 @@ implementation
 uses
   Windows;
 
+var
+  WindowWidth : Int32;
+  WindowHeight : Int32;
+
 function Win32WindowProc(Window: HWND; Msg: UInt; wP: WPARAM;
   lP: LPARAM): LRESULT; stdcall;
 begin
+  case Msg of
+    WM_SIZE:
+    begin
+      WindowWidth := LOWORD(lP);
+      WindowHeight := HIWORD(lP);
+      WriteLn(WindowWidth);
+      WriteLn(WindowHeight);
+    end;
+  end;
   Result := DefWindowProc(Window, Msg, wP, lP);
 end;
 
@@ -24,7 +37,7 @@ var
   WindowClass: TWNDCLASS;
   Window: HWND;
   Running: boolean;
-  Msg : TMsg;
+  Msg: TMsg;
 begin
   FillChar(WindowClass, SizeOf(WindowClass), #0);
   WindowClass.lpszClassName := 'Leverman_Window';
@@ -44,7 +57,7 @@ begin
         while PeekMessage(@Msg, Window, 0, 0, PM_REMOVE) do
         begin
           if Msg.message = WM_QUIT then
-            Running := false;
+            Running := False;
           TranslateMessage(@Msg);
           DispatchMessage(@Msg);
         end;
